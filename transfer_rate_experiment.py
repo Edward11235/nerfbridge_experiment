@@ -16,7 +16,7 @@ def packet_subscriber():
     pose_pub = rospy.Publisher("/pose", PoseStamped, queue_size=10000)
 
     # Path to the image files and pose file
-    img_dir = '/home/nerf-bridge/Desktop/nerf_studio_dataset/nerfstudio/ORB_SLAM_raw_output/rgb'
+    img_dir = 'rgb'
     pose_file = 'ORB_SLAM2_output_trajectory.txt'
 
     # Ensure the directories and files exist
