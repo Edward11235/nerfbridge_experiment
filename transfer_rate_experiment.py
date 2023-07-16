@@ -76,11 +76,11 @@ def packet_subscriber():
             image_pub.publish(img_msg)
             pose_pub.publish(pose_msg)
 
-            print(f"{timestamp:.6f}.png", x, y, z, qx, qy, qz, qw)
+            print(f"{timestamp:.6f}.png")
 
             # You may want to control the rate of publishing
             # For that, uncomment and adjust the line below
-            rospy.sleep(1)
+            rospy.sleep(10)
     except KeyboardInterrupt:
         rospy.signal_shutdown('User requested shutdown')
 
