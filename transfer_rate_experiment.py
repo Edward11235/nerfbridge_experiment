@@ -80,7 +80,7 @@ def packet_subscriber():
 
             # You may want to control the rate of publishing
             # For that, uncomment and adjust the line below
-            rospy.sleep(10)
+            rospy.sleep(1)
     except KeyboardInterrupt:
         rospy.signal_shutdown('User requested shutdown')
 
