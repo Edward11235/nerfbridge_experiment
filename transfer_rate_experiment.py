@@ -17,7 +17,7 @@ def packet_subscriber():
 
     # Path to the image files and pose file
     img_dir = 'rgb'
-    pose_file = 'ORB_SLAM2_output_trajectory.txt'
+    pose_file = '/home/edward/Desktop/nerfbridge_experiment/ORB_SLAM2_output_trajectory.txt'
 
     # Ensure the directories and files exist
     assert os.path.exists(img_dir), f"Image directory not found at {img_dir}"

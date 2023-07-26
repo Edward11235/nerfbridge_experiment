@@ -1,0 +1,5 @@
+python3 ros_train.py --method-name ros_nerfacto --data ~/Desktop/nerfbridge_all_data --pipeline.datamanager.dataparser.ros-data TUM_config_office.json --draw-training-images True
+
+ns-render camera-path --load-config /home/edward/Desktop/server_end/outputs/unnamed/ros_nerfacto/2023-07-25_150526/config.yml --camera-path-filename /home/edward/Desktop/server_end/camera_path.json --output-path /home/edward/Desktop/nerfbridge_render --output-format images
+
+ns-render camera-path --load-config /home/edward/Desktop/server_end/outputs/unnamed/ros_nerfacto/2023-07-25_150526/config.yml --camera-path-filename /home/edward/Desktop/server_end/camera_path_test.json --output-path /home/edward/Desktop/nerfbridge_render --output-format images
