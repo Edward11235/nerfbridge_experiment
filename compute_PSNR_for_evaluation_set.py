@@ -3,6 +3,9 @@ import cv2
 import numpy as np
 import argparse
 
+# EXAMPLE:
+# python3 compute_PSNR_for_evaluation_set.py /home/racoon/Desktop/test_compute_PSNR/folder_1 /home/racoon/Desktop/test_compute_PSNR/folder_2
+
 def calculate_psnr(img1, img2):
     # Compute PSNR
     return cv2.PSNR(img1, img2)
