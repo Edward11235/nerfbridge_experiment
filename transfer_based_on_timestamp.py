@@ -78,7 +78,7 @@ def packet_subscriber():
 
             if prev_timestamp is not None and index < len(poses) - 1:
                 next_timestamp = float(poses[index + 1].split()[0])
-                time_diff = next_timestamp - prev_timestamp
+                time_diff = next_timestamp - timestamp
                 elapsed_time = rospy.Time.now().to_sec() - loop_start_time
                 sleep_duration = max(time_diff - elapsed_time, 0)
                 rospy.sleep(sleep_duration)
@@ -87,9 +87,9 @@ def packet_subscriber():
 
     except KeyboardInterrupt:
         rospy.signal_shutdown('User requested shutdown')
-    finally:
+    # finally:
         # Plot the transmission timestamps for pose
-        plot_timestamps(pose_timestamps, "Pose Transmission Timestamps", "pose_transmission_timestamp.png")
+        # plot_timestamps(pose_timestamps, "Pose Transmission Timestamps", "pose_transmission_timestamp.png")
 
 if __name__ == "__main__":
     packet_subscriber()
