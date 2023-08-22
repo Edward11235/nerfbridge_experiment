@@ -44,7 +44,6 @@ def packet_subscriber():
             pose_data = pose_line.split()
             assert len(pose_data) == 8, "Unexpected pose format"
             timestamp, x, y, z, qx, qy, qz, qw = map(float, pose_data)
-            print(timestamp)
             img_path = os.path.join(img_dir, f"frame{int(timestamp):06}.jpg")
             timestamp = timestamp / 30  # since frame rate of replica is 30 fps
             assert os.path.exists(img_path), f"No image found for timestamp {timestamp:.6f}"
